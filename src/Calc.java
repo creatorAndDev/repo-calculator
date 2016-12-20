@@ -6,15 +6,15 @@ public class Calc extends JFrame {
 	
 	//FIELDS
 	private int WIDTH = 250;
-	private int HEIGHT = 350;
+	private int HEIGHT = 300;
 	
 	private int firstValue = 0;
 	private String operation = "+";
 	
 	//Содержимое окна
-	JTextArea display = new JTextArea("", 3, 99); //дисплей калькулятора
+	JTextArea display = new JTextArea("", 1, 40); //дисплей калькулятора 
 	
-	JPanel buttonPanel = new JPanel(new GridLayout(3,5)); //панель с кнопками
+	JPanel buttonPanel = new JPanel(new GridLayout(3,5)); //панель содержащая кнопки
 	
 	//создаем обьекты кнопок
     JButton button0 = new JButton("0"); //кнопка 0
@@ -44,6 +44,9 @@ public class Calc extends JFrame {
 		
 		//расположение содержимого в окне
 		add(display, BorderLayout.NORTH); //добавляем окно ввода textarea
+		//задаем размер шрифта в поле ввода
+		display.setFont(new Font("Serif",Font.PLAIN, 62));
+		
 		add(buttonPanel, BorderLayout.CENTER); //добавляем область для кнопок от 0 - 9 +=-/...
         add(buttonStart, BorderLayout.SOUTH); //добавляем кнопку =
         
@@ -65,9 +68,16 @@ public class Calc extends JFrame {
         buttonPanel.add(buttonDivide).setEnabled(false);
         buttonPanel.add(buttonSub).setEnabled(false);
         buttonPanel.add(buttonMul).setEnabled(false);
+        //задаем размер шрифта кнопкам
+        buttonSum.setFont(new Font("Serif",Font.PLAIN,22));
+        buttonDel.setFont(new Font("Serif",Font.PLAIN,22));
+        buttonDivide.setFont(new Font("Serif",Font.PLAIN,22));
+        buttonSub.setFont(new Font("Serif",Font.PLAIN,22));
+        buttonMul.setFont(new Font("Serif",Font.PLAIN,22));
+        buttonStart.setFont(new Font("Serif",Font.PLAIN,32));
         
         //задаем размер кнопки =
-        buttonStart.setPreferredSize(new Dimension(WIDTH, 50));
+        buttonStart.setPreferredSize(new Dimension(WIDTH, 46));
         
         //действия при клике
         //Добавление цифр в область textarea
@@ -209,6 +219,14 @@ public class Calc extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String temp = display.getText();
                 display.setText("");
+                
+                //отключаем кнопки
+                buttonSum.setEnabled(false);
+    			buttonDivide.setEnabled(false);
+    			buttonSub.setEnabled(false);
+    			buttonMul.setEnabled(false);
+    			buttonStart.setEnabled(false);
+    			
               //проверка, пустое ли поле ввода
 //                if (temp.equals("")) {
 //                	//отключаем кнопки
@@ -284,11 +302,11 @@ public class Calc extends JFrame {
                 operation = "+";
                 
                 //отключаем кнопки
-                buttonStart.setEnabled(false);
-                buttonSum.setEnabled(false);
-                buttonDivide.setEnabled(false);
-                buttonSub.setEnabled(false);
-                buttonMul.setEnabled(false);
+//                buttonStart.setEnabled(false);
+//                buttonSum.setEnabled(false);
+//                buttonDivide.setEnabled(false);
+//                buttonSub.setEnabled(false);
+//                buttonMul.setEnabled(false);
             }
         });
 	}	
