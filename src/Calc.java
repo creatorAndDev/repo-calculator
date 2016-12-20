@@ -34,7 +34,7 @@ public class Calc extends JFrame {
     JButton button8 = new JButton("8"); //кнопка 8
     JButton button9 = new JButton("9"); //кнопка 9
     JButton buttonSum = new JButton("+"); //кнопка +
-    JButton buttonBack = new JButton("C"); //кнопка С
+    JButton buttonDel = new JButton("C"); //кнопка С
     JButton buttonDivide = new JButton("/"); //кнопка /
     JButton buttonSub = new JButton("-"); //кнопка -
     JButton buttonMul = new JButton("*"); //кнопка *
@@ -46,8 +46,6 @@ public class Calc extends JFrame {
 		
 		setResizable(false); //запрещаем растягивать окно
 		setSize(WIDTH, HEIGHT); //размер окна width, height
-//		setLayout(new BorderLayout()); //для расположения кнопок и полей
-//		setEnabled(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // закрытие окна по крестику
 		
 		//расположение содержимого в окне
@@ -67,19 +65,12 @@ public class Calc extends JFrame {
         buttonPanel.add(button8);
         buttonPanel.add(button9);
        
-        buttonPanel.add(buttonSum);
-        buttonPanel.add(buttonBack);
-        buttonPanel.add(buttonDivide);
-        buttonPanel.add(buttonSub);
-        buttonPanel.add(buttonMul);
-        
-        //отключаем операции все до ввода чисел
-        buttonStart.setEnabled(false);
-        buttonSum.setEnabled(false);
-        buttonBack.setEnabled(false);
-        buttonDivide.setEnabled(false);
-        buttonSub.setEnabled(false);
-        buttonMul.setEnabled(false);
+      //создаем кнопки и отключаем операции (кнопки) до активации ввода чисел
+        buttonPanel.add(buttonSum).setEnabled(false);
+        buttonPanel.add(buttonDel);
+        buttonPanel.add(buttonDivide).setEnabled(false);
+        buttonPanel.add(buttonSub).setEnabled(false);
+        buttonPanel.add(buttonMul).setEnabled(false);
         
         //действия при клике
         //Добавление цифр в область textarea
@@ -88,69 +79,151 @@ public class Calc extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "0");
+                
+                //включаем кнопки
+                buttonStart.setEnabled(true);
+                buttonSum.setEnabled(true);
+                buttonDivide.setEnabled(true);
+                buttonSub.setEnabled(true);
+                buttonMul.setEnabled(true);
             }
         });
         button1.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "1");
+                
+                //включаем кнопки
+                buttonStart.setEnabled(true);
+                buttonSum.setEnabled(true);
+                buttonDivide.setEnabled(true);
+                buttonSub.setEnabled(true);
+                buttonMul.setEnabled(true);
             }
         });
         button2.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "2");
+                
+                //включаем кнопки
+                buttonStart.setEnabled(true);
+                buttonSum.setEnabled(true);
+                buttonDivide.setEnabled(true);
+                buttonSub.setEnabled(true);
+                buttonMul.setEnabled(true);
             }
         });
         button3.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "3");
+                
+                //включаем кнопки
+                buttonStart.setEnabled(true);
+                buttonSum.setEnabled(true);
+                buttonDivide.setEnabled(true);
+                buttonSub.setEnabled(true);
+                buttonMul.setEnabled(true);
             }
         });
         button4.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "4");
+                
+                //включаем кнопки
+                buttonStart.setEnabled(true);
+                buttonSum.setEnabled(true);
+                buttonDivide.setEnabled(true);
+                buttonSub.setEnabled(true);
+                buttonMul.setEnabled(true);
             }
         });
         button5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "5");
+                
+                //включаем кнопки
+                buttonStart.setEnabled(true);
+                buttonSum.setEnabled(true);
+                buttonDivide.setEnabled(true);
+                buttonSub.setEnabled(true);
+                buttonMul.setEnabled(true);
             }
         });
         button6.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "6");
+                
+                //включаем кнопки
+                buttonStart.setEnabled(true);
+                buttonSum.setEnabled(true);
+                buttonDivide.setEnabled(true);
+                buttonSub.setEnabled(true);
+                buttonMul.setEnabled(true);
             }
         });
         button7.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "7");
+                
+                //включаем кнопки
+                buttonStart.setEnabled(true);
+                buttonSum.setEnabled(true);
+                buttonDivide.setEnabled(true);
+                buttonSub.setEnabled(true);
+                buttonMul.setEnabled(true);
             }
         });
         button8.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "8");
+                
+                //включаем кнопки
+                buttonStart.setEnabled(true);
+                buttonSum.setEnabled(true);
+                buttonDivide.setEnabled(true);
+                buttonSub.setEnabled(true);
+                buttonMul.setEnabled(true);
             }
         });
         button9.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "9");
+                
+                //включаем кнопки
+                buttonStart.setEnabled(true);
+                buttonSum.setEnabled(true);
+                buttonDivide.setEnabled(true);
+                buttonSub.setEnabled(true);
+                buttonMul.setEnabled(true);
             }
         });
         
         //кнопка "C" будет удалять
-        buttonBack.addActionListener(new ActionListener() {
+        buttonDel.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 String temp = display.getText();
-                display.setText(temp.substring(0, temp.length() - 1));
+                display.setText("");
+              //проверка, пустое ли поле ввода
+//                if (temp.equals("")) {
+//                	//отключаем кнопки
+//                	buttonSum.setEnabled(false);
+//                	buttonBack.setEnabled(false);
+//                	buttonDivide.setEnabled(false);
+//                	buttonSub.setEnabled(false);
+//                	buttonMul.setEnabled(false);
+//                } else {
+////                display.setText(temp.substring(0, temp.length() - 1)); //убираем по одной
+//                	display.setText(""); // сразу пустое место
+//                }
             }
         });
         
@@ -162,6 +235,7 @@ public class Calc extends JFrame {
                 firstValue = Integer.valueOf(display.getText());
                 display.setText("");
                 operation = "+";
+                buttonStart.setEnabled(true); //включаем равно
             }
         });
         buttonMul.addActionListener(new ActionListener() {
@@ -170,6 +244,7 @@ public class Calc extends JFrame {
                 firstValue = Integer.valueOf(display.getText());
                 display.setText("");
                 operation = "*";
+                buttonStart.setEnabled(true); //включаем равно
             }
         });
         buttonDivide.addActionListener(new ActionListener() {
@@ -178,6 +253,7 @@ public class Calc extends JFrame {
                 firstValue = Integer.valueOf(display.getText());
                 display.setText("");
                 operation = "/";
+                buttonStart.setEnabled(true); //включаем равно
             }
         });
         buttonSub.addActionListener(new ActionListener() {
@@ -186,6 +262,7 @@ public class Calc extends JFrame {
                 firstValue = Integer.valueOf(display.getText());
                 display.setText("");
                 operation = "-";
+                buttonStart.setEnabled(true); //включаем равно
             }
         });
         
@@ -208,6 +285,13 @@ public class Calc extends JFrame {
                 }
                 firstValue = 0;
                 operation = "+";
+                
+                //отключаем кнопки
+                buttonStart.setEnabled(false);
+                buttonSum.setEnabled(false);
+                buttonDivide.setEnabled(false);
+                buttonSub.setEnabled(false);
+                buttonMul.setEnabled(false);
             }
         });
 	}	
