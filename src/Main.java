@@ -47,6 +47,7 @@ public class Main extends JFrame{
 		setResizable(false); //запрещаем растягивать окно
 		setSize(WIDTH, HEIGHT); //размер окна width, height
 //		setLayout(new BorderLayout()); //для расположения кнопок и полей
+//		setEnabled(false);
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // закрытие окна по крестику
 		
 		//расположение содержимого в окне
@@ -71,6 +72,14 @@ public class Main extends JFrame{
         buttonPanel.add(buttonDivide);
         buttonPanel.add(buttonSub);
         buttonPanel.add(buttonMul);
+        
+        //отключаем операции все до ввода чисел
+        buttonStart.setEnabled(false);
+        buttonSum.setEnabled(false);
+        buttonBack.setEnabled(false);
+        buttonDivide.setEnabled(false);
+        buttonSub.setEnabled(false);
+        buttonMul.setEnabled(false);
         
         //действия при клике
         //Добавление цифр в область textarea
