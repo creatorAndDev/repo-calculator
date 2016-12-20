@@ -300,13 +300,6 @@ public class Calc extends JFrame {
                 }
                 firstValue = 0;
                 operation = "+";
-                
-                //отключаем кнопки
-//                buttonStart.setEnabled(false);
-//                buttonSum.setEnabled(false);
-//                buttonDivide.setEnabled(false);
-//                buttonSub.setEnabled(false);
-//                buttonMul.setEnabled(false);
             }
         });
 	}	
