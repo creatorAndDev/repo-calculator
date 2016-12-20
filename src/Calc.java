@@ -1,13 +1,7 @@
-import java.awt.BorderLayout;
-import java.awt.GridLayout;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import java.awt.*;
+import java.awt.event.*;
 
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.JTextArea;
-
+import javax.swing.*;
 public class Calc extends JFrame {
 	
 	//FIELDS
@@ -18,7 +12,7 @@ public class Calc extends JFrame {
 	private String operation = "+";
 	
 	//Содержимое окна
-	JTextArea display = new JTextArea(); //дисплей калькулятора
+	JTextArea display = new JTextArea("", 3, 99); //дисплей калькулятора
 	
 	JPanel buttonPanel = new JPanel(new GridLayout(3,5)); //панель с кнопками
 	
@@ -71,6 +65,9 @@ public class Calc extends JFrame {
         buttonPanel.add(buttonDivide).setEnabled(false);
         buttonPanel.add(buttonSub).setEnabled(false);
         buttonPanel.add(buttonMul).setEnabled(false);
+        
+        //задаем размер кнопки =
+        buttonStart.setPreferredSize(new Dimension(WIDTH, 50));
         
         //действия при клике
         //Добавление цифр в область textarea
