@@ -9,6 +9,7 @@ public class Calc extends JFrame {
 	private int HEIGHT = 300;
 	
 	private int firstValue = 0;
+//	private float floatValue = 0.0f;
 	private String operation = "+";
 	
 	//Содержимое окна
@@ -69,11 +70,11 @@ public class Calc extends JFrame {
         buttonPanel.add(buttonSub).setEnabled(false);
         buttonPanel.add(buttonMul).setEnabled(false);
         //задаем размер шрифта кнопкам
-        buttonSum.setFont(new Font("Serif",Font.PLAIN,22));
-        buttonDel.setFont(new Font("Serif",Font.PLAIN,22));
-        buttonDivide.setFont(new Font("Serif",Font.PLAIN,22));
-        buttonSub.setFont(new Font("Serif",Font.PLAIN,22));
-        buttonMul.setFont(new Font("Serif",Font.PLAIN,22));
+        buttonSum.setFont(new Font("Serif",Font.PLAIN,24));
+        buttonDel.setFont(new Font("Serif",Font.PLAIN,16));
+        buttonDivide.setFont(new Font("Serif",Font.PLAIN,24));
+        buttonSub.setFont(new Font("Serif",Font.PLAIN,24));
+        buttonMul.setFont(new Font("Serif",Font.PLAIN,24));
         buttonStart.setFont(new Font("Serif",Font.PLAIN,32));
         
         //задаем размер кнопки =
@@ -213,7 +214,7 @@ public class Calc extends JFrame {
             }
         });
         
-        //кнопка "C" будет удалять
+        //кнопка "C" будет очищать поле
         buttonDel.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
@@ -266,6 +267,8 @@ public class Calc extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 firstValue = Integer.valueOf(display.getText());
+//                floatValue = Float.valueOf(display.getText());
+                
                 display.setText("");
                 operation = "/";
                 buttonStart.setEnabled(true); //включаем равно
@@ -286,6 +289,10 @@ public class Calc extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 int secondValue = Integer.valueOf(display.getText());
+                
+                //для дробного вычисления
+                float secondFloatValue = Float.valueOf(display.getText());
+                
                 if("+".equals(operation)){
                     display.setText((firstValue + secondValue) + "");
                 }
@@ -296,7 +303,16 @@ public class Calc extends JFrame {
                     display.setText((firstValue * secondValue) + "");
                 }
                 if("/".equals(operation)){
-                    display.setText((firstValue / secondValue) + "");
+                	//создаем переменную дробных вычислений
+                	float numResult = (float) (firstValue / secondFloatValue);
+                	
+                	//проверка на целое число и пересчет по типу
+            		if(numResult % 1 == 0){
+            			int numResultInt = (int) (firstValue / secondValue);
+            			display.setText((numResultInt) + "");
+            		} else {
+            			display.setText((numResult) + "");
+            		}
                 }
                 firstValue = 0;
                 operation = "+";
