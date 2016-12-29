@@ -14,6 +14,7 @@ public class Calc extends JFrame {
 	
 	//Содержимое окна
 //	JTextArea display = new JTextArea("", 1, 40); //дисплей калькулятора 
+	//окно вывода посчета и чисел
 	JTextField display = new JTextField(5);
 	
 	
