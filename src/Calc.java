@@ -8,7 +8,7 @@ public class Calc extends JFrame {
 	private int WIDTH = 250;
 	private int HEIGHT = 300;
 	
-	private int firstValue = 0;
+	public long firstValue = 0;
 //	private float floatValue = 0.0f;
 	private String operation = "+";
 	
@@ -16,7 +16,6 @@ public class Calc extends JFrame {
 //	JTextArea display = new JTextArea("", 1, 40); //дисплей калькулятора 
 	//окно вывода посчета и чисел
 	JTextField display = new JTextField(5);
-	
 	
 	JPanel buttonPanel = new JPanel(new GridLayout(3,5)); //панель содержащая кнопки
 	
@@ -48,10 +47,17 @@ public class Calc extends JFrame {
 		
 		//расположение содержимого в окне
 		add(display, BorderLayout.NORTH); //добавляем окно ввода textarea
-		//убираем с поля ввода чисел возможность редактировать
-		display.setEditable(false);
 		//задаем размер шрифта в поле ввода
 		display.setFont(new Font("Serif",Font.PLAIN, 62));
+		
+		//убираем с поля ввода чисел возможность редактировать
+		display.setEditable(false);
+		//Направление ввода чисел
+		display.setHorizontalAlignment(JTextField.RIGHT);
+		
+//		if(display.equals(4)){
+//			display.setFont(new Font("Serif",Font.PLAIN, 22));
+//		}
 		
 		add(buttonPanel, BorderLayout.CENTER); //добавляем область для кнопок от 0 - 9 +=-/...
         add(buttonStart, BorderLayout.SOUTH); //добавляем кнопку =
@@ -92,6 +98,17 @@ public class Calc extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "0");
+
+                //меняем шрифт если число становится больше окна
+                if(display.getText().length() == 8){
+        			display.setFont(new Font("Serif",Font.PLAIN, 42));
+        	    } else if(display.getText().length() == 12) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 32));
+        	    } else if(display.getText().length() == 16) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 22));
+        	    } else if(display.getText().length() == 22) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 16));
+        	    }
                 
                 //включаем кнопки
                 buttonStart.setEnabled(true);
@@ -105,6 +122,17 @@ public class Calc extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "1");
+
+                //меняем шрифт если число становится больше окна
+                if(display.getText().length() == 8){
+        			display.setFont(new Font("Serif",Font.PLAIN, 42));
+        	    } else if(display.getText().length() == 12) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 32));
+        	    } else if(display.getText().length() == 16) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 22));
+        	    } else if(display.getText().length() == 22) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 16));
+        	    }
                 
                 //включаем кнопки
                 buttonStart.setEnabled(true);
@@ -118,6 +146,17 @@ public class Calc extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "2");
+
+                //меняем шрифт если число становится больше окна
+                if(display.getText().length() == 8){
+        			display.setFont(new Font("Serif",Font.PLAIN, 42));
+        	    } else if(display.getText().length() == 12) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 32));
+        	    } else if(display.getText().length() == 16) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 22));
+        	    } else if(display.getText().length() == 22) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 16));
+        	    }
                 
                 //включаем кнопки
                 buttonStart.setEnabled(true);
@@ -131,6 +170,17 @@ public class Calc extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "3");
+
+                //меняем шрифт если число становится больше окна
+                if(display.getText().length() == 8){
+        			display.setFont(new Font("Serif",Font.PLAIN, 42));
+        	    } else if(display.getText().length() == 12) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 32));
+        	    } else if(display.getText().length() == 16) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 22));
+        	    } else if(display.getText().length() == 22) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 16));
+        	    }
                 
                 //включаем кнопки
                 buttonStart.setEnabled(true);
@@ -144,6 +194,17 @@ public class Calc extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "4");
+
+                //меняем шрифт если число становится больше окна
+                if(display.getText().length() == 8){
+        			display.setFont(new Font("Serif",Font.PLAIN, 42));
+        	    } else if(display.getText().length() == 12) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 32));
+        	    } else if(display.getText().length() == 16) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 22));
+        	    } else if(display.getText().length() == 22) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 16));
+        	    }
                 
                 //включаем кнопки
                 buttonStart.setEnabled(true);
@@ -157,6 +218,17 @@ public class Calc extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "5");
+
+                //меняем шрифт если число становится больше окна
+                if(display.getText().length() == 8){
+        			display.setFont(new Font("Serif",Font.PLAIN, 42));
+        	    } else if(display.getText().length() == 12) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 32));
+        	    } else if(display.getText().length() == 16) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 22));
+        	    } else if(display.getText().length() == 22) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 16));
+        	    }
                 
                 //включаем кнопки
                 buttonStart.setEnabled(true);
@@ -170,6 +242,17 @@ public class Calc extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "6");
+
+                //меняем шрифт если число становится больше окна
+                if(display.getText().length() == 8){
+        			display.setFont(new Font("Serif",Font.PLAIN, 42));
+        	    } else if(display.getText().length() == 12) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 32));
+        	    } else if(display.getText().length() == 16) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 22));
+        	    } else if(display.getText().length() == 22) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 16));
+        	    }
                 
                 //включаем кнопки
                 buttonStart.setEnabled(true);
@@ -183,6 +266,17 @@ public class Calc extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "7");
+
+                //меняем шрифт если число становится больше окна
+                if(display.getText().length() == 8){
+        			display.setFont(new Font("Serif",Font.PLAIN, 42));
+        	    } else if(display.getText().length() == 12) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 32));
+        	    } else if(display.getText().length() == 16) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 22));
+        	    } else if(display.getText().length() == 22) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 16));
+        	    }
                 
                 //включаем кнопки
                 buttonStart.setEnabled(true);
@@ -196,6 +290,17 @@ public class Calc extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "8");
+
+                //меняем шрифт если число становится больше окна
+                if(display.getText().length() == 8){
+        			display.setFont(new Font("Serif",Font.PLAIN, 42));
+        	    } else if(display.getText().length() == 12) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 32));
+        	    } else if(display.getText().length() == 16) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 22));
+        	    } else if(display.getText().length() == 22) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 16));
+        	    }
                 
                 //включаем кнопки
                 buttonStart.setEnabled(true);
@@ -209,6 +314,17 @@ public class Calc extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "9");
+
+                //меняем шрифт если число становится больше окна
+                if(display.getText().length() == 8){
+        			display.setFont(new Font("Serif",Font.PLAIN, 42));
+        	    } else if(display.getText().length() == 12) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 32));
+        	    } else if(display.getText().length() == 16) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 22));
+        	    } else if(display.getText().length() == 22) {
+        	    	display.setFont(new Font("Serif",Font.PLAIN, 16));
+        	    }
                 
                 //включаем кнопки
                 buttonStart.setEnabled(true);
@@ -225,6 +341,7 @@ public class Calc extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 String temp = display.getText();
                 display.setText("");
+                display.setFont(new Font("Serif",Font.PLAIN, 62));
                 
                 //отключаем кнопки
                 buttonSum.setEnabled(false);
@@ -253,7 +370,7 @@ public class Calc extends JFrame {
         buttonSum.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                firstValue = Integer.valueOf(display.getText());
+                firstValue = Long.valueOf(display.getText());
                 display.setText("");
                 operation = "+";
                 buttonStart.setEnabled(true); //включаем равно
@@ -262,7 +379,7 @@ public class Calc extends JFrame {
         buttonMul.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                firstValue = Integer.valueOf(display.getText());
+                firstValue = Long.valueOf(display.getText());
                 display.setText("");
                 operation = "*";
                 buttonStart.setEnabled(true); //включаем равно
@@ -271,7 +388,7 @@ public class Calc extends JFrame {
         buttonDivide.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                firstValue = Integer.valueOf(display.getText());
+                firstValue = Long.valueOf(display.getText());
 //                floatValue = Float.valueOf(display.getText());
                 
                 display.setText("");
@@ -282,7 +399,7 @@ public class Calc extends JFrame {
         buttonSub.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                firstValue = Integer.valueOf(display.getText());
+                firstValue = Long.valueOf(display.getText());
                 display.setText("");
                 operation = "-";
                 buttonStart.setEnabled(true); //включаем равно
@@ -293,7 +410,7 @@ public class Calc extends JFrame {
         buttonStart.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                int secondValue = Integer.valueOf(display.getText());
+                long secondValue = Long.valueOf(display.getText());
                 
                 //для дробного вычисления
                 float secondFloatValue = Float.valueOf(display.getText());
@@ -313,8 +430,8 @@ public class Calc extends JFrame {
                 	
                 	//проверка на целое число и пересчет по типу
             		if(numResult % 1 == 0){
-            			int numResultInt = (int) (firstValue / secondValue);
-            			display.setText((numResultInt) + "");
+            			long numResultLong = (long) (firstValue / secondValue);
+            			display.setText((numResultLong) + "");
             		} else {
             			display.setText((numResult) + "");
             		}
