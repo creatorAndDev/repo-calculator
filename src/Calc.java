@@ -374,6 +374,11 @@ public class Calc extends JFrame {
                 display.setText("");
                 operation = "+";
                 buttonStart.setEnabled(true); //включаем равно
+                
+    			buttonDivide.setEnabled(false);
+    			buttonSub.setEnabled(false);
+    			buttonMul.setEnabled(false);
+    			buttonStart.setEnabled(false);
             }
         });
         buttonMul.addActionListener(new ActionListener() {
@@ -383,6 +388,11 @@ public class Calc extends JFrame {
                 display.setText("");
                 operation = "*";
                 buttonStart.setEnabled(true); //включаем равно
+                
+                buttonSum.setEnabled(false);
+    			buttonDivide.setEnabled(false);
+    			buttonSub.setEnabled(false);
+    			buttonStart.setEnabled(false);
             }
         });
         buttonDivide.addActionListener(new ActionListener() {
@@ -394,6 +404,11 @@ public class Calc extends JFrame {
                 display.setText("");
                 operation = "/";
                 buttonStart.setEnabled(true); //включаем равно
+                
+                buttonSum.setEnabled(false);
+    			buttonSub.setEnabled(false);
+    			buttonMul.setEnabled(false);
+    			buttonStart.setEnabled(false);
             }
         });
         buttonSub.addActionListener(new ActionListener() {
@@ -403,6 +418,11 @@ public class Calc extends JFrame {
                 display.setText("");
                 operation = "-";
                 buttonStart.setEnabled(true); //включаем равно
+                
+                buttonSum.setEnabled(false);
+    			buttonDivide.setEnabled(false);
+    			buttonMul.setEnabled(false);
+    			buttonStart.setEnabled(false);
             }
         });
         
