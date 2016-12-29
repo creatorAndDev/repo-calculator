@@ -13,7 +13,9 @@ public class Calc extends JFrame {
 	private String operation = "+";
 	
 	//Содержимое окна
-	JTextArea display = new JTextArea("", 1, 40); //дисплей калькулятора 
+//	JTextArea display = new JTextArea("", 1, 40); //дисплей калькулятора 
+	JTextField display = new JTextField(5);
+	
 	
 	JPanel buttonPanel = new JPanel(new GridLayout(3,5)); //панель содержащая кнопки
 	
@@ -45,6 +47,8 @@ public class Calc extends JFrame {
 		
 		//расположение содержимого в окне
 		add(display, BorderLayout.NORTH); //добавляем окно ввода textarea
+		//убираем с поля ввода чисел возможность редактировать
+		display.setEditable(false);
 		//задаем размер шрифта в поле ввода
 		display.setFont(new Font("Serif",Font.PLAIN, 62));
 		
