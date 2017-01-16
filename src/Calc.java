@@ -315,7 +315,7 @@ public class Calc extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "0");
 
-                //меняем шрифт если число становится больше окна
+                //меняем размер шрифта если число становится больше окна
                 if(display.getText().length() == 8){
         			display.setFont(new Font("Serif",Font.PLAIN, 42));
         	    } else if(display.getText().length() == 12) {
@@ -339,7 +339,7 @@ public class Calc extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "1");
 
-                //меняем шрифт если число становится больше окна
+                //меняем размер шрифта если число становится больше окна
                 if(display.getText().length() == 8){
         			display.setFont(new Font("Serif",Font.PLAIN, 42));
         	    } else if(display.getText().length() == 12) {
@@ -363,7 +363,7 @@ public class Calc extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "2");
 
-                //меняем шрифт если число становится больше окна
+                //меняем размер шрифта если число становится больше окна
                 if(display.getText().length() == 8){
         			display.setFont(new Font("Serif",Font.PLAIN, 42));
         	    } else if(display.getText().length() == 12) {
@@ -387,7 +387,7 @@ public class Calc extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "3");
 
-                //меняем шрифт если число становится больше окна
+                //меняем размер шрифта если число становится больше окна
                 if(display.getText().length() == 8){
         			display.setFont(new Font("Serif",Font.PLAIN, 42));
         	    } else if(display.getText().length() == 12) {
@@ -411,7 +411,7 @@ public class Calc extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "4");
 
-                //меняем шрифт если число становится больше окна
+                //меняем размер шрифта если число становится больше окна
                 if(display.getText().length() == 8){
         			display.setFont(new Font("Serif",Font.PLAIN, 42));
         	    } else if(display.getText().length() == 12) {
@@ -435,7 +435,7 @@ public class Calc extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "5");
 
-                //меняем шрифт если число становится больше окна
+                //меняем размер шрифта если число становится больше окна
                 if(display.getText().length() == 8){
         			display.setFont(new Font("Serif",Font.PLAIN, 42));
         	    } else if(display.getText().length() == 12) {
@@ -459,7 +459,7 @@ public class Calc extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "6");
 
-                //меняем шрифт если число становится больше окна
+                //меняем размер шрифта если число становится больше окна
                 if(display.getText().length() == 8){
         			display.setFont(new Font("Serif",Font.PLAIN, 42));
         	    } else if(display.getText().length() == 12) {
@@ -483,7 +483,7 @@ public class Calc extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "7");
 
-                //меняем шрифт если число становится больше окна
+                //меняем размер шрифта если число становится больше окна
                 if(display.getText().length() == 8){
         			display.setFont(new Font("Serif",Font.PLAIN, 42));
         	    } else if(display.getText().length() == 12) {
@@ -507,7 +507,7 @@ public class Calc extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "8");
 
-                //меняем шрифт если число становится больше окна
+                //меняем размер шрифта если число становится больше окна
                 if(display.getText().length() == 8){
         			display.setFont(new Font("Serif",Font.PLAIN, 42));
         	    } else if(display.getText().length() == 12) {
@@ -531,7 +531,7 @@ public class Calc extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 display.setText(display.getText() + "9");
 
-                //меняем шрифт если число становится больше окна
+                //меняем размер шрифта если число становится больше окна
                 if(display.getText().length() == 8){
         			display.setFont(new Font("Serif",Font.PLAIN, 42));
         	    } else if(display.getText().length() == 12) {
