@@ -2,6 +2,7 @@ import java.awt.*;
 import java.awt.event.*;
 
 import javax.swing.*;
+import javax.swing.border.LineBorder;
 public class Calc extends JFrame {
 	
 	//FIELDS
@@ -13,11 +14,12 @@ public class Calc extends JFrame {
 	private String operation = "+";
 	
 	//Содержимое окна
+//	JFrame frame = new JFrame();
 //	JTextArea display = new JTextArea("", 1, 40); //дисплей калькулятора 
 	//окно вывода посчета и чисел
-	JTextField display = new JTextField(5);
-	
-	JPanel buttonPanel = new JPanel(new GridLayout(3,5)); //панель содержащая кнопки
+	JTextField display = new JTextField(10);
+	//панель содержащая кнопки
+	JPanel buttonPanel = new JPanel(new GridLayout(3,5)); 
 	
 	//создаем обьекты кнопок
     JButton button0 = new JButton("0"); //кнопка 0
@@ -45,16 +47,40 @@ public class Calc extends JFrame {
 		setSize(WIDTH, HEIGHT); //размер окна width, height
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // закрытие окна по крестику
 		
+		//цвет заднего фона панели
+		getContentPane().setBackground(Color.GRAY);
+		//цвет заднего фона кнопок
+		buttonPanel.setBackground(Color.GRAY);
+		
+		//WINDOW FIELD
 		//расположение содержимого в окне
 		add(display, BorderLayout.NORTH); //добавляем окно ввода textarea
 		//задаем размер шрифта в поле ввода
-		display.setFont(new Font("Serif",Font.PLAIN, 62));
-		
+		display.setFont(new Font("Cosmic",Font.PLAIN, 62));
+		//цвет фона окна ввода/вывода
+//		display.setBackground(new Color(0, 0, 0));
+		display.setBackground(Color.GRAY);
+		//цвет ввода/вывода
+		display.setForeground(Color.WHITE);
+		//цвет бордера
+		display.setBorder(new LineBorder(Color.GRAY, 1));
 		//убираем с поля ввода чисел возможность редактировать
 		display.setEditable(false);
 		//Направление ввода чисел
 		display.setHorizontalAlignment(JTextField.RIGHT);
 		
+		//цвет фона для кнопок
+//		button0.setBackground(Color.BLACK);
+//		button1.setBackground(new Color(224, 224, 224));
+//		button2.setBackground(new Color(224, 224, 224));
+//		button3.setBackground(new Color(224, 224, 224));
+//		button4.setBackground(new Color(224, 224, 224));
+//		button5.setBackground(new Color(224, 224, 224));
+//		button6.setBackground(new Color(224, 224, 224));
+//		button7.setBackground(new Color(224, 224, 224));
+//		button8.setBackground(new Color(224, 224, 224));
+//		button9.setBackground(new Color(224, 224, 224));
+//		
 		//ввод с клавиатуры. слушатель кнопок с помощью свитчера
 //	    display.addKeyListener(new KeyAdapter() {
 //	    	public void keyPressed(KeyEvent e) {
