@@ -12,35 +12,35 @@ public class Calc extends JFrame {
 	public long firstValue = 0;
 //	private float floatValue = 0.0f;
 	private String operation = "+";
+	
+	//Содержимое окна
+//	JFrame frame = new JFrame();
+//	JTextArea display = new JTextArea("", 1, 40); //дисплей калькулятора 
+	//окно вывода посчета и чисел
+	JTextField display = new JTextField(5);
+	//панель содержащая кнопки
+	JPanel buttonPanel = new JPanel(new GridLayout(3,5)); 
+	
+	//создаем обьекты кнопок
+    JButton button0 = new JButton("0"); //кнопка 0
+    JButton button1 = new JButton("1"); //кнопка 1
+    JButton button2 = new JButton("2"); //кнопка 2
+    JButton button3 = new JButton("3"); //кнопка 3
+    JButton button4 = new JButton("4"); //кнопка 4
+    JButton button5 = new JButton("5"); //кнопка 5
+    JButton button6 = new JButton("6"); //кнопка 6
+    JButton button7 = new JButton("7"); //кнопка 7
+    JButton button8 = new JButton("8"); //кнопка 8
+    JButton button9 = new JButton("9"); //кнопка 9
+    JButton buttonSum = new JButton("+"); //кнопка +
+    JButton buttonDel = new JButton("C"); //кнопка С
+    JButton buttonDivide = new JButton("/"); //кнопка /
+    JButton buttonSub = new JButton("-"); //кнопка -
+    JButton buttonMul = new JButton("*"); //кнопка *
+    JButton buttonStart = new JButton("="); //кнопка =
 
 	//CONSTRUCTOR MAIN FOR JFRAME CALC
 	public Calc(){
-		//Содержимое окна
-//		JFrame frame = new JFrame();
-//		JTextArea display = new JTextArea("", 1, 40); //дисплей калькулятора 
-		//окно вывода посчета и чисел
-		JTextField display = new JTextField(5);
-		//панель содержащая кнопки
-		JPanel buttonPanel = new JPanel(new GridLayout(3,5)); 
-		
-		//создаем обьекты кнопок
-	    JButton button0 = new JButton("0"); //кнопка 0
-	    JButton button1 = new JButton("1"); //кнопка 1
-	    JButton button2 = new JButton("2"); //кнопка 2
-	    JButton button3 = new JButton("3"); //кнопка 3
-	    JButton button4 = new JButton("4"); //кнопка 4
-	    JButton button5 = new JButton("5"); //кнопка 5
-	    JButton button6 = new JButton("6"); //кнопка 6
-	    JButton button7 = new JButton("7"); //кнопка 7
-	    JButton button8 = new JButton("8"); //кнопка 8
-	    JButton button9 = new JButton("9"); //кнопка 9
-	    JButton buttonSum = new JButton("+"); //кнопка +
-	    JButton buttonDel = new JButton("C"); //кнопка С
-	    JButton buttonDivide = new JButton("/"); //кнопка /
-	    JButton buttonSub = new JButton("-"); //кнопка -
-	    JButton buttonMul = new JButton("*"); //кнопка *
-	    JButton buttonStart = new JButton("="); //кнопка =
-	    
 		setTitle("Калькулятор"); //заголовок окна
 		
 		setResizable(false); //запрещаем растягивать окно
