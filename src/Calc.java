@@ -55,6 +55,7 @@ public class Calc extends JFrame {
 		//WINDOW FIELD
 		//расположение содержимого в окне
 		add(display, BorderLayout.NORTH); //добавляем окно ввода textarea
+//		add(new JTextPlaceHolder("0"), BorderLayout.NORTH);
 		//задаем размер шрифта в поле ввода
 		display.setFont(new Font("Cosmic",Font.PLAIN, 62));
 		//цвет фона окна ввода/вывода
@@ -68,6 +69,8 @@ public class Calc extends JFrame {
 		display.setEditable(false);
 		//Направление ввода чисел
 		display.setHorizontalAlignment(JTextField.RIGHT);
+		
+//		getContentPane().add(new JTextPlaceHolder("0"), BorderLayout.LINE_START);
 //		
 		//ввод с клавиатуры. слушатель кнопок с помощью свитчера
 //	    display.addKeyListener(new KeyAdapter() {
