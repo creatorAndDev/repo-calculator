@@ -17,7 +17,7 @@ public class Calc extends JFrame {
 //	JFrame frame = new JFrame();
 //	JTextArea display = new JTextArea("", 1, 40); //дисплей калькулятора 
 	//окно вывода посчета и чисел
-	JTextField display = new JTextField(10);
+	JTextField display = new JTextField(5);
 	//панель содержащая кнопки
 	JPanel buttonPanel = new JPanel(new GridLayout(3,5)); 
 	
@@ -68,18 +68,6 @@ public class Calc extends JFrame {
 		display.setEditable(false);
 		//Направление ввода чисел
 		display.setHorizontalAlignment(JTextField.RIGHT);
-		
-		//цвет фона для кнопок
-//		button0.setBackground(Color.BLACK);
-//		button1.setBackground(new Color(224, 224, 224));
-//		button2.setBackground(new Color(224, 224, 224));
-//		button3.setBackground(new Color(224, 224, 224));
-//		button4.setBackground(new Color(224, 224, 224));
-//		button5.setBackground(new Color(224, 224, 224));
-//		button6.setBackground(new Color(224, 224, 224));
-//		button7.setBackground(new Color(224, 224, 224));
-//		button8.setBackground(new Color(224, 224, 224));
-//		button9.setBackground(new Color(224, 224, 224));
 //		
 		//ввод с клавиатуры. слушатель кнопок с помощью свитчера
 //	    display.addKeyListener(new KeyAdapter() {
@@ -702,5 +690,17 @@ public class Calc extends JFrame {
                 operation = "+";
             }
         });
+        
+        //цвет фона для кнопок
+//  		button0.setBackground(Color.BLACK);
+//  		button1.setBackground(new Color(224, 224, 224));
+//  		button2.setBackground(new Color(224, 224, 224));
+//  		button3.setBackground(new Color(224, 224, 224));
+//  		button4.setBackground(new Color(224, 224, 224));
+//  		button5.setBackground(new Color(224, 224, 224));
+//  		button6.setBackground(new Color(224, 224, 224));
+//  		button7.setBackground(new Color(224, 224, 224));
+//  		button8.setBackground(new Color(224, 224, 224));
+//  		button9.setBackground(new Color(224, 224, 224));
 	}	
 }
