@@ -17,7 +17,7 @@ public class Calc extends JFrame {
 //	JFrame frame = new JFrame();
 //	JTextArea display = new JTextArea("", 1, 40); //дисплей калькулятора 
 	//окно вывода посчета и чисел
-	JTextField display = new JTextField(10);
+	JTextField display = new JTextField(5);
 	//панель содержащая кнопки
 	JPanel buttonPanel = new JPanel(new GridLayout(3,5)); 
 	
@@ -41,7 +41,7 @@ public class Calc extends JFrame {
 
 	//CONSTRUCTOR MAIN FOR JFRAME CALC
 	public Calc(){
-		super("Калькулятор"); //заголовок окна
+		setTitle("Калькулятор"); //заголовок окна
 		
 		setResizable(false); //запрещаем растягивать окно
 		setSize(WIDTH, HEIGHT); //размер окна width, height
@@ -55,6 +55,7 @@ public class Calc extends JFrame {
 		//WINDOW FIELD
 		//расположение содержимого в окне
 		add(display, BorderLayout.NORTH); //добавляем окно ввода textarea
+//		add(new JTextPlaceHolder("0"), BorderLayout.NORTH);
 		//задаем размер шрифта в поле ввода
 		display.setFont(new Font("Cosmic",Font.PLAIN, 62));
 		//цвет фона окна ввода/вывода
@@ -69,17 +70,7 @@ public class Calc extends JFrame {
 		//Направление ввода чисел
 		display.setHorizontalAlignment(JTextField.RIGHT);
 		
-		//цвет фона для кнопок
-//		button0.setBackground(Color.BLACK);
-//		button1.setBackground(new Color(224, 224, 224));
-//		button2.setBackground(new Color(224, 224, 224));
-//		button3.setBackground(new Color(224, 224, 224));
-//		button4.setBackground(new Color(224, 224, 224));
-//		button5.setBackground(new Color(224, 224, 224));
-//		button6.setBackground(new Color(224, 224, 224));
-//		button7.setBackground(new Color(224, 224, 224));
-//		button8.setBackground(new Color(224, 224, 224));
-//		button9.setBackground(new Color(224, 224, 224));
+//		getContentPane().add(new JTextPlaceHolder("0"), BorderLayout.LINE_START);
 //		
 		//ввод с клавиатуры. слушатель кнопок с помощью свитчера
 //	    display.addKeyListener(new KeyAdapter() {
@@ -317,11 +308,13 @@ public class Calc extends JFrame {
         buttonPanel.add(button9);
        
         //создаем кнопки и отключаем операции (кнопки) до активации ввода чисел
+        buttonStart.setEnabled(false);
         buttonPanel.add(buttonSum).setEnabled(false);
         buttonPanel.add(buttonDel);
         buttonPanel.add(buttonDivide).setEnabled(false);
         buttonPanel.add(buttonSub).setEnabled(false);
         buttonPanel.add(buttonMul).setEnabled(false);
+        
         //задаем размер шрифта кнопкам
         buttonSum.setFont(new Font("Serif",Font.PLAIN,24));
         buttonDel.setFont(new Font("Serif",Font.PLAIN,16));
@@ -353,7 +346,7 @@ public class Calc extends JFrame {
         	    }
                 
                 //включаем кнопки
-                buttonStart.setEnabled(true);
+//                buttonStart.setEnabled(false);
                 buttonSum.setEnabled(true);
                 buttonDivide.setEnabled(true);
                 buttonSub.setEnabled(true);
@@ -377,7 +370,7 @@ public class Calc extends JFrame {
         	    }
                 
                 //включаем кнопки
-                buttonStart.setEnabled(true);
+//                buttonStart.setEnabled(false);
                 buttonSum.setEnabled(true);
                 buttonDivide.setEnabled(true);
                 buttonSub.setEnabled(true);
@@ -401,7 +394,7 @@ public class Calc extends JFrame {
         	    }
                 
                 //включаем кнопки
-                buttonStart.setEnabled(true);
+//                buttonStart.setEnabled(false);
                 buttonSum.setEnabled(true);
                 buttonDivide.setEnabled(true);
                 buttonSub.setEnabled(true);
@@ -425,7 +418,7 @@ public class Calc extends JFrame {
         	    }
                 
                 //включаем кнопки
-                buttonStart.setEnabled(true);
+//                buttonStart.setEnabled(false);
                 buttonSum.setEnabled(true);
                 buttonDivide.setEnabled(true);
                 buttonSub.setEnabled(true);
@@ -449,7 +442,7 @@ public class Calc extends JFrame {
         	    }
                 
                 //включаем кнопки
-                buttonStart.setEnabled(true);
+//                buttonStart.setEnabled(false);
                 buttonSum.setEnabled(true);
                 buttonDivide.setEnabled(true);
                 buttonSub.setEnabled(true);
@@ -473,7 +466,7 @@ public class Calc extends JFrame {
         	    }
                 
                 //включаем кнопки
-                buttonStart.setEnabled(true);
+//                buttonStart.setEnabled(false);
                 buttonSum.setEnabled(true);
                 buttonDivide.setEnabled(true);
                 buttonSub.setEnabled(true);
@@ -497,7 +490,7 @@ public class Calc extends JFrame {
         	    }
                 
                 //включаем кнопки
-                buttonStart.setEnabled(true);
+//                buttonStart.setEnabled(false);
                 buttonSum.setEnabled(true);
                 buttonDivide.setEnabled(true);
                 buttonSub.setEnabled(true);
@@ -521,7 +514,7 @@ public class Calc extends JFrame {
         	    }
                 
                 //включаем кнопки
-                buttonStart.setEnabled(true);
+//                buttonStart.setEnabled(false);
                 buttonSum.setEnabled(true);
                 buttonDivide.setEnabled(true);
                 buttonSub.setEnabled(true);
@@ -545,7 +538,7 @@ public class Calc extends JFrame {
         	    }
                 
                 //включаем кнопки
-                buttonStart.setEnabled(true);
+//                buttonStart.setEnabled(false);
                 buttonSum.setEnabled(true);
                 buttonDivide.setEnabled(true);
                 buttonSub.setEnabled(true);
@@ -569,7 +562,7 @@ public class Calc extends JFrame {
         	    }
                 
                 //включаем кнопки
-                buttonStart.setEnabled(true);
+//                buttonStart.setEnabled(false);
                 buttonSum.setEnabled(true);
                 buttonDivide.setEnabled(true);
                 buttonSub.setEnabled(true);
@@ -620,7 +613,7 @@ public class Calc extends JFrame {
     			buttonDivide.setEnabled(false);
     			buttonSub.setEnabled(false);
     			buttonMul.setEnabled(false);
-    			buttonStart.setEnabled(false);
+//    			buttonStart.setEnabled(false);
             }
         });
         buttonMul.addActionListener(new ActionListener() {
@@ -634,7 +627,7 @@ public class Calc extends JFrame {
                 buttonSum.setEnabled(false);
     			buttonDivide.setEnabled(false);
     			buttonSub.setEnabled(false);
-    			buttonStart.setEnabled(false);
+//    			buttonStart.setEnabled(false);
             }
         });
         buttonDivide.addActionListener(new ActionListener() {
@@ -650,7 +643,7 @@ public class Calc extends JFrame {
                 buttonSum.setEnabled(false);
     			buttonSub.setEnabled(false);
     			buttonMul.setEnabled(false);
-    			buttonStart.setEnabled(false);
+//    			buttonStart.setEnabled(false);
             }
         });
         buttonSub.addActionListener(new ActionListener() {
@@ -664,7 +657,7 @@ public class Calc extends JFrame {
                 buttonSum.setEnabled(false);
     			buttonDivide.setEnabled(false);
     			buttonMul.setEnabled(false);
-    			buttonStart.setEnabled(false);
+//    			buttonStart.setEnabled(false);
             }
         });
         
